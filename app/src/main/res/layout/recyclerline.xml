@@ -7,23 +7,39 @@
     android:layout_margin="10dp">
 
     <TextView
-        android:id="@+id/Country"
+        android:id="@+id/name"
         android:layout_margin="10dp"
         android:textStyle="bold"
-        android:text="Country"
+        android:text="Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <TextView
-        android:id="@+id/Capital"
-        android:text="Capital"
-        android:layout_below="@+id/Country"
-        android:layout_alignLeft="@id/Country"
+        android:id="@+id/signal"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:text="-"
+        android:layout_toRightOf="@id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/nationality"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:text="Nationality"
+        android:layout_toRightOf="@id/signal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/Sport"
+        android:text="Sport"
+        android:layout_below="@+id/nationality"
+        android:layout_alignLeft="@id/nationality"
         android:layout_marginBottom="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <TextView
-        android:id="@+id/Habitants"
-        android:text="habitants"
+        android:id="@+id/yearOfBirthday"
+        android:text="yearOfBirthday"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_margin="10dp"

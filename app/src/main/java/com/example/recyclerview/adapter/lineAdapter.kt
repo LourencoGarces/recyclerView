@@ -6,23 +6,27 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recyclerview.R
-import com.example.recyclerview.dataClass.Place
+import com.example.recyclerview.dataClass.Person
 import java.util.ArrayList
 
 
 
-class LineAdapter(private val dataSet: ArrayList<Place>) :
+class LineAdapter(private val dataSet: ArrayList<Person>) :
     RecyclerView.Adapter<LineAdapter.ViewHolder> (){
 
         class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-            val country: TextView
-            val capital: TextView
-            val habitants: TextView
+            val name: TextView
+            val signal: TextView
+            val nationality: TextView
+            val Sport: TextView
+            val yearOfBirthday: TextView
 
             init {
-                country = view.findViewById(R.id.Country)
-                capital = view.findViewById(R.id.Capital)
-                habitants = view.findViewById(R.id.Habitants)
+                name = view.findViewById(R.id.name)
+                signal = view.findViewById(R.id.signal)
+                nationality = view.findViewById(R.id.nationality)
+                Sport = view.findViewById(R.id.Sport)
+                yearOfBirthday = view.findViewById(R.id.yearOfBirthday)
             }
         }
 
@@ -33,9 +37,11 @@ class LineAdapter(private val dataSet: ArrayList<Place>) :
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
-        viewHolder.country.text = dataSet[position].country
-        viewHolder.capital.text = dataSet[position].capital
-        viewHolder.habitants.text = dataSet[position].habitants.toString()
+        viewHolder.name.text = dataSet[position].name
+        viewHolder.signal.text = "-"
+        viewHolder.nationality.text = dataSet[position].nationality
+        viewHolder.Sport.text = dataSet[position].sport
+        viewHolder.yearOfBirthday.text = dataSet[position].yearOfBirth.toString()
     }
 
     override fun getItemCount() = dataSet.size

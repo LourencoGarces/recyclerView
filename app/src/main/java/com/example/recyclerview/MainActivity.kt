@@ -8,10 +8,10 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recyclerview.adapter.LineAdapter
-import com.example.recyclerview.dataClass.Place
+import com.example.recyclerview.dataClass.Person
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var myList: ArrayList<Place>
+    private lateinit var myList: ArrayList<Person>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -21,10 +21,11 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        myList = ArrayList<Place>()
-        for (i in 0 until 500) {
-            myList.add(Place("Country $i", i*500, "Capital $i"))
-        }
+        myList = ArrayList<Person>()
+        myList.add(Person("Football", "Lionel Messi", 1987, "Argentina"))
+        myList.add(Person("Football", "Cristiano Ronaldo", 1985, "Portugal"))
+        myList.add(Person("Football", "Neymar", 1992, "Brasil"))
+
         val recycler_view: RecyclerView = findViewById(R.id.recycler)
         recycler_view.adapter = LineAdapter(myList)
         recycler_view.layoutManager = LinearLayoutManager(this)
