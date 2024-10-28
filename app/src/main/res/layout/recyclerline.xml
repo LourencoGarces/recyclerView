@@ -1,45 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@color/black"
+    android:background="#50C878"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp">
 
     <TextView
-        android:id="@+id/name"
+        android:id="@+id/name_nationality"
         android:layout_margin="10dp"
-        android:textStyle="bold"
-        android:text="Name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/signal"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"
-        android:text="-"
-        android:layout_toRightOf="@id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/nationality"
-        android:layout_margin="10dp"
-        android:textStyle="bold"
-        android:text="Nationality"
-        android:layout_toRightOf="@id/signal"
+        android:text="@string/NameNationality"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <TextView
         android:id="@+id/Sport"
-        android:text="Sport"
-        android:layout_below="@+id/nationality"
-        android:layout_alignLeft="@id/nationality"
+        android:text="@string/Sport"
+        android:layout_below="@+id/name_nationality"
+        android:layout_alignLeft="@id/name_nationality"
         android:layout_marginBottom="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <TextView
         android:id="@+id/yearOfBirthday"
-        android:text="yearOfBirthday"
+        android:text="@string/Year"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_margin="10dp"

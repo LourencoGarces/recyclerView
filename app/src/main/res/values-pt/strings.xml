@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RecyclerView</string>
+    <string name="Year">Ano de Nascimento</string>
+    <string name="Sport">Desporto</string>
+    <string name="NameNationality">Nome - Nacionalidade</string>
+</resources>

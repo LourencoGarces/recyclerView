@@ -9,22 +9,16 @@ import com.example.recyclerview.R
 import com.example.recyclerview.dataClass.Person
 import java.util.ArrayList
 
-
-
 class LineAdapter(private val dataSet: ArrayList<Person>) :
     RecyclerView.Adapter<LineAdapter.ViewHolder> (){
 
         class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-            val name: TextView
-            val signal: TextView
-            val nationality: TextView
+            val name_nationality: TextView
             val Sport: TextView
             val yearOfBirthday: TextView
 
             init {
-                name = view.findViewById(R.id.name)
-                signal = view.findViewById(R.id.signal)
-                nationality = view.findViewById(R.id.nationality)
+                name_nationality = view.findViewById(R.id.name_nationality)
                 Sport = view.findViewById(R.id.Sport)
                 yearOfBirthday = view.findViewById(R.id.yearOfBirthday)
             }
@@ -32,16 +26,14 @@ class LineAdapter(private val dataSet: ArrayList<Person>) :
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.recyclerline, viewGroup, false)
+            .inflate(R.layout.recyclerline,viewGroup,false)
             return ViewHolder(view)
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
-        viewHolder.name.text = dataSet[position].name
-        viewHolder.signal.text = "-"
-        viewHolder.nationality.text = dataSet[position].nationality
+        viewHolder.name_nationality.text = dataSet[position].name +" - "+ dataSet[position].nationality
         viewHolder.Sport.text = dataSet[position].sport
-        viewHolder.yearOfBirthday.text = dataSet[position].yearOfBirth.toString()
+        viewHolder.yearOfBirthday.text = (2024 - dataSet[position].yearOfBirth).toString()
     }
 
     override fun getItemCount() = dataSet.size
